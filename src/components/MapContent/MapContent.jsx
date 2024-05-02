@@ -7,9 +7,13 @@ import data from '../../data/regions.json';
 import 'leaflet/dist/leaflet.css';
 
 import PropTypes from 'prop-types';
-import PopUpCard from '../PopUuCard/PopUpCard';
 
-const MapContent = ({ addresses, setMapData, setSelectedAddressId }) => {
+const MapContent = ({
+  addresses,
+  setMapData,
+  setSelectedAddressId,
+  setSelectedRegion,
+}) => {
   const [hoveredFeature, setHoveredFeature] = useState(null);
   const map = useMap();
 
@@ -27,6 +31,12 @@ const MapContent = ({ addresses, setMapData, setSelectedAddressId }) => {
 
   const onEachFeature = (feature, layer) => {
     layer.on({
+      click: (e) => {
+        setSelectedRegion((prev) => [
+          ...prev,
+          e.target.feature.properties.name,
+        ]);
+      },
       mouseover: (e) => {
         setHoveredFeature(e.target.feature.properties.name);
       },
@@ -54,7 +64,6 @@ const MapContent = ({ addresses, setMapData, setSelectedAddressId }) => {
             }}
           >
             <Popup>
-              <PopUpCard />
               {adress.settlement_name}
               <br /> {adress.street}
             </Popup>
@@ -80,6 +89,7 @@ MapContent.propTypes = {
   addresses: PropTypes.arrayOf(PropTypes.any).isRequired,
   setMapData: PropTypes.func.isRequired,
   setSelectedAddressId: PropTypes.func.isRequired,
+  setSelectedRegion: PropTypes.func.isRequired,
 };
 
 export default MapContent;

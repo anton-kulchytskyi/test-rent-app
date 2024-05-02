@@ -1,9 +1,27 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Divider, List, Card, Avatar } from 'antd';
-import { AntDesignOutlined } from '@ant-design/icons';
-const { Meta } = Card;
+import { Divider, List, Modal, Space } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
-const RightSideBar = ({ visibleAddresses, selectedCard }) => {
+
+import CardItem from '../CardItem/CardItem';
+import ProductCard from '../ProductCard/ProductCard';
+
+const RightSideBar = ({ visibleAddresses, selectedCard, toggleMap }) => {
+  const [selectedProductCard, setSelectedPruductCard] = useState({});
+  const [isCardModalOpen, setIsCardModalOpen] = useState(false);
+
+  const selectProductCard = (id) => {
+    const newSelectedProductCard = visibleAddresses.find(
+      (address) => address.id === id
+    );
+    setSelectedPruductCard(newSelectedProductCard);
+    setIsCardModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsCardModalOpen(false);
+  };
+  const cardCnt = toggleMap ? 1 : 3;
   return (
     <div
       id="scrollableDiv"
@@ -16,45 +34,51 @@ const RightSideBar = ({ visibleAddresses, selectedCard }) => {
     >
       <InfiniteScroll
         dataLength={visibleAddresses.length}
+        hasMore={visibleAddresses.length < 50}
         endMessage={<Divider plain>It is all, nothing more 🤐</Divider>}
         scrollableTarget="scrollableDiv"
       >
+        <Space direction="vertical">
+          {selectedCard && (
+            <>
+              <h3>Вибране на мапі оголошення</h3>
+              <CardItem address={selectedCard} />
+            </>
+          )}
+        </Space>
+        <Divider plain />
         <h3>
           Знайдено {visibleAddresses.length} оголошень на видимій території
         </h3>
-        {selectedCard && <h3>{selectedCard.settlement_name}</h3>}
         <List
+          grid={{ gutter: 16, column: cardCnt }}
           dataSource={visibleAddresses}
           renderItem={(item) => (
-            <List.Item key={item.id}>
-              <Card
-                style={{
-                  width: 300,
-                }}
-                cover={
-                  <img
-                    alt="example"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                  />
-                }
-              >
-                <Meta
-                  avatar={<Avatar icon={<AntDesignOutlined />} />}
-                  title={`${item.settlement_name} ${item.street}`}
-                  description={`Ціна: ${item.price} UAH`}
-                />
-              </Card>
+            <List.Item
+              key={item.id}
+              onClick={() => selectProductCard(item.id)}
+            >
+              <CardItem address={item} />
             </List.Item>
           )}
         />
       </InfiniteScroll>
+      <Modal
+        title={selectedProductCard.type}
+        open={isCardModalOpen}
+        onOk={handleCancel}
+        onCancel={handleCancel}
+      >
+        <ProductCard selectedProductCard={selectedProductCard} />
+      </Modal>
     </div>
   );
 };
 
 RightSideBar.propTypes = {
-  selectedCard: PropTypes.any.isRequired,
+  selectedCard: PropTypes.any,
   visibleAddresses: PropTypes.arrayOf(PropTypes.any).isRequired,
+  toggleMap: PropTypes.bool.isRequired,
 };
 
 export default RightSideBar;

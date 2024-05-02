@@ -3,7 +3,7 @@
   "features": [
     {
       "type": "Feature",
-      "properties": { "name": "cherkasy_oblast" },
+      "properties": { "name": "Черкаська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -391,7 +391,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "chernihiv_oblast" },
+      "properties": { "name": "Чернігівська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -788,7 +788,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "chernivtsi_oblast" },
+      "properties": { "name": "Чернівецька" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1043,7 +1043,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "crimea" },
+      "properties": { "name": "Крим" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1214,7 +1214,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "dnipropetrovsk_oblast" },
+      "properties": { "name": "Дніпропетровська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1624,7 +1624,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "donetsk_oblast" },
+      "properties": { "name": "Донецька" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -1953,7 +1953,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "ivano-frankivsk_oblast" },
+      "properties": { "name": "Івано-Франківська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -2256,7 +2256,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "kharkiv_oblast" },
+      "properties": { "name": "Харківська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -2628,7 +2628,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "kherson_oblast" },
+      "properties": { "name": "Херсонська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -2916,7 +2916,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "zhytomyr_oblast" },
+      "properties": { "name": "Житомирська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -3274,7 +3274,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "zaporizhia_oblast" },
+      "properties": { "name": "Запорізька" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -3577,7 +3577,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "zakarpattia_oblast" },
+      "properties": { "name": "Закарпатська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -3818,7 +3818,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "volyn_oblast" },
+      "properties": { "name": "Волинська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -4120,7 +4120,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "vinnytsia_oblast" },
+      "properties": { "name": "Вінницька" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -4472,7 +4472,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "ternopil_oblast" },
+      "properties": { "name": "Тернопільська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -4778,7 +4778,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "sumy_oblast" },
+      "properties": { "name": "Сумська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -5186,7 +5186,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "sevastopol" },
+      "properties": { "name": "Севастопіль" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -5351,7 +5351,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "rivne_oblast" },
+      "properties": { "name": "Рівненська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -5704,7 +5704,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "poltava_oblast" },
+      "properties": { "name": "Полтавська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -6059,7 +6059,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "odessa_oblast" },
+      "properties": { "name": "Одеська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -6553,7 +6553,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "mykolaiv_oblast" },
+      "properties": { "name": "Миколаївська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -6910,7 +6910,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "lviv_oblast" },
+      "properties": { "name": "Львівська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -7171,7 +7171,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "luhansk_oblast" },
+      "properties": { "name": "Луганська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -7493,7 +7493,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "kirovohrad_oblast" },
+      "properties": { "name": "Кіровоградська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -7926,7 +7926,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "kiev_oblast" },
+      "properties": { "name": "Київська" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -8365,7 +8365,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "kiev" },
+      "properties": { "name": "Київ" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
@@ -8643,7 +8643,7 @@
     },
     {
       "type": "Feature",
-      "properties": { "name": "khmelnytskyi_oblast" },
+      "properties": { "name": "Хмельницька" },
       "geometry": {
         "type": "MultiPolygon",
         "coordinates": [
